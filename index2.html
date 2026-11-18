@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Usuarios | LocalStorage</title>
+    <link rel="stylesheet" href="css2.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h2>Registro de Usuarios</h2>
+            <p class="subtitle">Sistema de demostración con <code>localStorage</code> (Usar solo claves ficticias).</p>
+        </header>
+
+        <main>
+            <form id="formulario" class="card">
+                <div class="input-group">
+                    <label for="nombre">Usuario:</label>
+                    <input type="text" id="nombre" placeholder="Ej. Ana Pérez" required autocomplete="off">
+                </div>
+
+                <div class="input-group">
+                    <label for="clave">Clave de prueba:</label>
+                    <input type="password" id="clave" placeholder="••••••••" required>
+                </div>
+
+                <button type="submit" id="btnGuardar" class="btn-primary">Guardar usuario</button>
+                <button type="button" id="btnCancelar" class="btn-secondary" style="display: none;">Cancelar edición</button>
+            </form>
+
+            <section class="table-section card">
+                <h3>Usuarios registrados</h3>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Usuario</th>
+                                <th>Clave</th>
+                                <th>Acción</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tablaUsuarios">
+                            <!-- Dinámico -->
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="js2.js"></script>
+</body>
+</html>
